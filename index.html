@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Situation Support System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="logo">S S S</div>
+      <button class="alert-pill" type="button">
+        <span class="dot"></span>
+        Emergency
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Smart Situation Support System</h1>
+        <p>Select a category to get the support you need.</p>
+      </section>
+
+      <section class="category-grid" aria-label="Primary support categories">
+        <article class="card">
+          <div class="icon pink">❤</div>
+          <h2>Healthcare</h2>
+          <p>Medical support and health services.</p>
+        </article>
+        <article class="card">
+          <div class="icon teal">🎓</div>
+          <h2>Education</h2>
+          <p>Learning resources and academic support.</p>
+        </article>
+        <article class="card">
+          <div class="icon green">🔧</div>
+          <h2>Technical</h2>
+          <p>Technical assistance and IT support.</p>
+        </article>
+        <article class="card">
+          <div class="icon purple">💼</div>
+          <h2>Work Professional</h2>
+          <p>Career guidance and workplace support.</p>
+        </article>
+      </section>
+
+      <p class="availability">Available 24/7 to provide the assistance you need.</p>
+
+      <section class="support-grid" aria-label="Support options">
+        <article class="card small">
+          <div class="icon indigo">ℹ</div>
+          <h3>More Info</h3>
+        </article>
+        <article class="card small">
+          <div class="icon orange">📝</div>
+          <h3>More Information Form</h3>
+        </article>
+        <article class="card small">
+          <div class="icon green">📞</div>
+          <h3>Customer Support Call</h3>
+        </article>
+        <article class="card small">
+          <div class="icon red">▶</div>
+          <h3>Video Tutorials</h3>
+        </article>
+        <article class="card small">
+          <div class="icon blue">📍</div>
+          <h3>Navigation & Locations</h3>
+        </article>
+      </section>
+
+      <section class="analysis" aria-label="AI situation analysis">
+        <div>
+          <h2>Describe your situation</h2>
+          <p>Our AI analyzes the details and responds with clear, step-by-step guidance.</p>
+        </div>
+        <form id="situation-form">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option>Healthcare</option>
+            <option>Education</option>
+            <option>Technical</option>
+            <option>Work Professional</option>
+            <option>Other</option>
+          </select>
+
+          <label for="situation">Situation details</label>
+          <textarea
+            id="situation"
+            name="situation"
+            placeholder="Describe what is happening, who is impacted, and what you need..."
+            required
+          ></textarea>
+
+          <button class="primary" type="submit">Analyze situation</button>
+        </form>
+        <div id="response" class="response" aria-live="polite">
+          <p class="placeholder">Share a situation to receive a detailed response.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Designed to deliver fast, reliable guidance in every situation.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

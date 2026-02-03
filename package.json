@@ -1,0 +1,14 @@
+{
+  "name": "smart-situation-support-system",
+  "version": "1.0.0",
+  "description": "Smart Situation Support System prototype with AI-style backend",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
