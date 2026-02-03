@@ -1,0 +1,138 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..cb22539e689b0bbb91c20045dd8572f44f896cc4
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,128 @@
++<!doctype html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Smart Situation Support System</title>
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <header class="hero">
++      <div class="hero-content">
++        <p class="eyebrow">Smart Situation Support System</p>
++        <h1>Handle any situation with clarity and speed.</h1>
++        <p class="subhead">
++          Capture the context, highlight what matters, and receive an actionable response plan in seconds.
++        </p>
++        <button class="primary" id="scroll-to-form">Build a response</button>
++      </div>
++      <div class="hero-card">
++        <h2>Live readiness</h2>
++        <ul>
++          <li><span>95%</span> response readiness score</li>
++          <li><span>12</span> active situations tracked</li>
++          <li><span>4</span> critical escalations flagged</li>
++        </ul>
++      </div>
++    </header>
++
++    <main>
++      <section class="panel">
++        <div class="panel-header">
++          <h2>Situation builder</h2>
++          <p>Describe a situation and let the system craft a clear, step-by-step response.</p>
++        </div>
++        <form id="situation-form">
++          <label>
++            Situation summary
++            <textarea
++              id="situation"
++              placeholder="Example: Customer reports a payment outage in region EU-West..."
++              required
++            ></textarea>
++          </label>
++
++          <div class="grid">
++            <label>
++              Category
++              <select id="category">
++                <option>Operational</option>
++                <option>Customer support</option>
++                <option>Security</option>
++                <option>Facilities</option>
++                <option>Personal safety</option>
++              </select>
++            </label>
++            <label>
++              Impact level
++              <select id="impact">
++                <option>Low</option>
++                <option>Medium</option>
++                <option>High</option>
++                <option>Critical</option>
++              </select>
++            </label>
++            <label>
++              Required response time
++              <select id="response-time">
++                <option>15 minutes</option>
++                <option>30 minutes</option>
++                <option>1 hour</option>
++                <option>4 hours</option>
++                <option>Same day</option>
++              </select>
++            </label>
++          </div>
++
++          <label>
++            Key stakeholders
++            <input id="stakeholders" type="text" placeholder="Example: On-call engineer, Account manager, Security" />
++          </label>
++
++          <button class="primary" type="submit">Generate response plan</button>
++        </form>
++      </section>
++
++      <section class="panel output" aria-live="polite">
++        <div class="panel-header">
++          <h2>Recommended response</h2>
++          <p>Tailored guidance based on your situation details.</p>
++        </div>
++        <div id="response" class="response-card">
++          <p class="placeholder">Submit a situation to see your response plan.</p>
++        </div>
++      </section>
++
++      <section class="panel features">
++        <div>
++          <h2>Why teams trust S4</h2>
++          <p>
++            The Smart Situation Support System (S4) adapts to any scenario: from service disruptions to
++            on-site safety events. It ensures the right people know what to do, when to do it, and how to
++            close the loop.
++          </p>
++        </div>
++        <ul>
++          <li>
++            <h3>Unified playbooks</h3>
++            <p>Blend operational, customer, and safety playbooks into a single response workflow.</p>
++          </li>
++          <li>
++            <h3>Clear escalation paths</h3>
++            <p>Automatically highlight who needs to be informed based on impact level.</p>
++          </li>
++          <li>
++            <h3>Post-incident closure</h3>
++            <p>Capture learnings and next steps to prevent repeat situations.</p>
++          </li>
++        </ul>
++      </section>
++    </main>
++
++    <footer>
++      <p>Designed to help every team respond to any situation with confidence.</p>
++    </footer>
++
++    <script src="app.js"></script>
++  </body>
++</html>
+ 
+EOF
+)
